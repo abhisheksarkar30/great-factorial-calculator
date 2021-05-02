@@ -1,5 +1,7 @@
 package edu.abhi.tool.greatfactorial;
 
+import edu.abhi.tool.greatfactorial.array.ArrayFactorialLauncher;
+import edu.abhi.tool.greatfactorial.executor.ExecutorArrayFactorialLauncher;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,9 +14,10 @@ public class GreatFactorialApplication implements CommandLineRunner {
 	}
 
 	@Override
-	public void run(String... args) {
-		ForkJoinFactorial.main(args);
-//		ArrayFactorial.main(args);
+	public void run(String... args) throws Exception {
 //		StringFactorial.main(args);
+//		ForkJoinFactorial.main(args);
+//		ExecutorArrayFactorialLauncher.main(args);
+		ArrayFactorialLauncher.main(args);
 	}
 }

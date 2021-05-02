@@ -1,4 +1,4 @@
-package edu.abhi.tool.greatfactorial;
+package edu.abhi.tool.greatfactorial.string;
 
 import java.util.*;
 public class StringFactorial {

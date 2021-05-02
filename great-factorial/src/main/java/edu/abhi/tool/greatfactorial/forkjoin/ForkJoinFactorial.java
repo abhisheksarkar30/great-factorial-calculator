@@ -1,4 +1,4 @@
-package edu.abhi.tool.greatfactorial;
+package edu.abhi.tool.greatfactorial.forkjoin;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -19,11 +19,12 @@ public class ForkJoinFactorial {
         long start = System.currentTimeMillis();
 
         List<Byte> revFactorial = forkJoinPool.invoke(new FactorialTask(input, 1L, input));
-        Collections.reverse(revFactorial);
-        revFactorial.stream().forEach(System.out::print);
 
         long diff = System.currentTimeMillis() - start;
         System.out.println(String.format("\nCalculation Time: %d Minute(s) %f Second(s)", diff / 60000, diff % 60000 / 1000.0));
+
+        Collections.reverse(revFactorial);
+        revFactorial.stream().forEach(System.out::print);
     }
 }
 
