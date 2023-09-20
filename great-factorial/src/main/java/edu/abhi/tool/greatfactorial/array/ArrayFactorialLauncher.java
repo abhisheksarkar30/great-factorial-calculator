@@ -20,18 +20,19 @@ public class ArrayFactorialLauncher {
         int resultIndex = calc.calculate(2, input);
 
         long diff = System.currentTimeMillis() - start;
-        System.out.println(String.format("Calculation Time: %d Minute(s) %f Second(s)", diff / 60000, diff % 60000 / 1000.0));
 
         int result[] = calc.getResult();
 
         for(int tempIndex = resultIndex; tempIndex < maxDigits; tempIndex++)
             System.out.print(result[tempIndex]);
         
-        System.out.println(maxDigits - resultIndex + " Digit(s)");
+        System.out.println(String.format("\n%d Digit(s)", maxDigits - resultIndex));
 
         if(input > 10)
             System.out.println(String.format("%d.%se+%d (TRUNCATED VALUE)", result[resultIndex], "" + result[resultIndex + 1]
                     + result[resultIndex + 2] + result[resultIndex + 3] + result[resultIndex + 4], (maxDigits - 1 - resultIndex)));
+
+        System.out.println(String.format("Calculation Time: %d Minute(s) %f Second(s)", diff / 60000, diff % 60000 / 1000.0));
     }
 
 }
