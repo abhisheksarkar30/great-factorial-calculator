@@ -24,14 +24,14 @@ public class ArrayFactorialLauncher {
 
         int result[] = calc.getResult();
 
+        for(int tempIndex = resultIndex; tempIndex < maxDigits; tempIndex++)
+            System.out.print(result[tempIndex]);
+        
+        System.out.println(maxDigits - resultIndex + " Digit(s)");
+
         if(input > 10)
             System.out.println(String.format("%d.%se+%d (TRUNCATED VALUE)", result[resultIndex], "" + result[resultIndex + 1]
                     + result[resultIndex + 2] + result[resultIndex + 3] + result[resultIndex + 4], (maxDigits - 1 - resultIndex)));
-
-        System.out.println(maxDigits - resultIndex + " Digit(s)");
-
-        for(; resultIndex < maxDigits; resultIndex++)
-            System.out.print(result[resultIndex]);
     }
 
 }
